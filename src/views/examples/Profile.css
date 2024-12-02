@@ -1,0 +1,22 @@
+.main-profile {
+  background: white url("../../assets/img/userinfo.jpg") scroll center;
+  background-size: cover;
+  height: 120vh;
+  width: 100%;
+  color: whitesmoke;
+}
+.profile-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+.label {
+  float: left;
+  font-weight: 500;
+}
+.text-login {
+  font-weight: 600;
+}
+.user-info li {
+  font-weight: bold;
+  margin-right: 30px;
+}
