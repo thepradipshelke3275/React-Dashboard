@@ -13,10 +13,7 @@ const Header = (props) => {
   };
   useEffect(() => {
     if (window.location.hash === "#/admin/index") {
-      // props.countGetData(data);
       props.usersGetData(data);
-      props.onDeviceGetData(data);
-      props.onLocationGetData(data);
     }
   }, []);
   return (
@@ -72,13 +69,13 @@ const Header = (props) => {
                           >
                             Device
                           </CardTitle>
-                          {props.device.isLoading ? (
+                          {/* {props.device.isLoading ? (
                             <CircularLoader />
                           ) : (
                             <span className="h2 font-weight-bold mb-0">
                               {props.device?.device?.length}
                             </span>
-                          )}
+                          )} */}
                           
                         </div>
                         <Col className="col-auto">
@@ -102,13 +99,13 @@ const Header = (props) => {
                           >
                             Location
                           </CardTitle>
-                          {props.location.isLoading ? (
+                          {/* {props.location.isLoading ? (
                             <CircularLoader />
                           ) : (
                             <span className="h2 font-weight-bold mb-0">
                               {props.location?.location?.length}
                             </span>
-                          )}
+                          )} */}
                           
                         </div>
                         <Col className="col-auto">
@@ -135,16 +132,12 @@ const mapStateToProps = (state) => {
   return {
     login: state.login,
     users: state.entities.users,
-    device: state.entities.device,
-    location: state.entities.location,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     usersGetData: (data) => dispatch(actions.usersGetData(data)),
-    onDeviceGetData: (data) => dispatch(actions.deviceGetData(data)),
-    onLocationGetData: (data) => dispatch(actions.locationGetData(data)),
   };
 };
 
